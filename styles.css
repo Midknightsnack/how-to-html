@@ -9,4 +9,33 @@ body {
     background: #333;
     color: white;
     font-size: 30px;
-  }
+}
+
+/*Style for a divider tag that contains screen reader messages.*/
+/*Hide these messages visually. A screen reader will still announce them as needed.*/
+.msgDivider {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+}
+
+/*Hide the modal from the user.*/
+#mdlgMain {
+    display: none;
+    visibility: hidden;  /*For iOS Safari and VoiceOver screen reader compatibility.*/
+}
+
+/*Apply preliminary styling to the modal dialog.*/
+.modalDlgMain {
+    position: fixed;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+}

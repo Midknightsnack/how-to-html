@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
+    <script src="js/modal-dialog.js"></script>
     <title>How-To-HTML</title>
 </head>
 <body>
@@ -14,8 +15,23 @@
     <div>
         Create a navigation bar here
     </div> <br>
+
+    <!-- Start of modal dialog section. -->
     <div>
-        Create a modal here and add a button to open it
+        <h2>Modal Dialog</h2>
+        <button id="openBtn" onclick="showModalDialog()">Open Modal Dialog</button><br>
+        <div role="region" aria-live="polite" id="announceMsg" class="msgDivider"></div>
+
+        <!-- The modal dialog itself. -->
+        <div role="dialog" aria-labelledby="dlgTitle" aria-modal="true" id="mdlgMain" class="modalDlgMain">
+            <!-- aria-label will now label the button to be spoken by a screen reader, but visually it remains the same for someone to just click intuitively. -->
+            <button id="closeBtn" onclick="hideModalDialog()" aria-label="Close Dialog">&times;</button>
+            <h1 id="dlgTitle">Sample Modal</h1>
+            <p>Success! the dialog is open.</p>
+            <p>Click the close button to return to the rest of the web page.</p>
+        </div>
+
+    <!-- End of modal section. -->
     </div> <br>
     <div>
         Change image on hover
@@ -26,5 +42,6 @@
     <div>
         Create a table 
     </div> <br>
+</main>
 </body>
 </html>
