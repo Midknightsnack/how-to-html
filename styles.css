@@ -39,3 +39,20 @@ body {
     height: 100%;
     overflow: auto;
 }
+
+/*Style the content of the dialog*/
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid;
+    width: 80%;
+}
+
+/*Style for the close button*/
+#closeBtn {
+    color: #aaa;  /*A grey color*/
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
