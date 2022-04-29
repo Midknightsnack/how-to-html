@@ -29,3 +29,8 @@ Optional but Recommended: On Visual Studio Code, there's a useful extension call
 ## Other Things to Note
 * There are designated areas to work on your issue in index.html. However, you're free to include other files as long as they don't conflict with index.html and styles.css.
 * If you work on an issue, make sure the things you create are stylized by utilizing styles.css. Change the font or give things a border, but don't just leave it with its default look.
+
+## Contact Information
+It's fine if you message me on GitHub, but I'll respond faster using the following:
+* Email: bdippin12@csu.fullerton.edu
+* Discord: Midknight#6920
