@@ -4,13 +4,14 @@
  * File: modalDialog.js
  * Programmer: Florentino Becerra
  * Date: 04/26/2022
+ * Revised: 05/03/2022
  * 
  * Description: This script is responsible for performing actions
  * when a modal dialog is to be displayed to the end-user
  */
 
 
-/**  showHideModalDialog
+/**  showModalDialog
  * This function is responsible for displaying and providing
  * proper focus handling to the modal dialog to a screen reader
  * 
@@ -29,9 +30,6 @@ function showModalDialog() {
 	modalDialogElem.style.display = "block";
 	closeBtn.focus();
 
-	// TODO: Trap the focus in the modal
-	// Could be in this function, but exploring alternatives
-
 }  // End of "showModalDialog"
 
 
@@ -44,9 +42,10 @@ function showModalDialog() {
 
 function hideModalDialog() {
 	let modalDialogElem = document.getElementById("mdlgMain");
+	let announceMsg = document.getElementById("announceMsg");
 	let openBtn = document.getElementById("openBtn");
 
-		// Hide the modal and return focus back to the button that opened it initially
+	// Hide the modal and return focus back to the button that opened it initially
 	modalDialogElem.style.display = "none";
 	// Safari on iOS with VoiceOver benefits from the visibility CSS property for appropriate awareness
 	modalDialogElem.style.visibility = "hidden";
@@ -55,15 +54,13 @@ function hideModalDialog() {
 	openBtn.focus();
 
 	// Clear the message from the HTML so the screen reader doesn't redundantly read it when navigating
-	setTimeout(clearAccessibleMessages, 4000);
-
-	// TODO: Untrap the focus so it may access the entire web page
-	// Exploring alternatives here also
+	// after 4 seconds
+	setTimeout(clearAccessibleMessage, 4000);
 
 }  // End of "hideModalDialog"
 
 
-/**  clearAccessibleMessages
+/**  clearAccessibleMessage
  * this is just a useful function to clear any messages that have already been
  * announced but that can be safely cleared from the document
  * For the time being, this just clears the message of the modal dialog being dismissed
@@ -72,6 +69,6 @@ function hideModalDialog() {
  * @return: void
  */
 
-function clearAccessibleMessages() {
+function clearAccessibleMessage() {
 	document.getElementById("announceMsg").innerHTML = "";
 }  // End of "clearAccessibleMessages"

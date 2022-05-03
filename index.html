@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
     <script src="js/modal-dialog.js"></script>
+   <script src="js/weather-main.js"></script>
     <title>How-To-HTML</title>
 </head>
 <body>
@@ -23,14 +24,19 @@
         <div role="region" aria-live="polite" id="announceMsg" class="msgDivider"></div>
 
         <!-- The modal dialog itself. -->
-        <div role="dialog" aria-labelledby="dlgTitle" aria-modal="true" id="mdlgMain" class="modalDlgMain">
+        <div role="dialog" aria-labelledby="dlgTitle" aria-modal="true" id="mdlgMain">
+            <div class="modalContent">
+            <button id="closeBtn" onclick="hideModalDialog()" aria-label="Close Weather Modal">&times;</button>
+            <h1 id="dlgTitle">Weather</h1>
+            <p>Click below to get the current weather for Fullerton, California.</p>
+            <button id="weatherBtn" onclick="getWeather()">Get Weather</button>
 
-            <div class="modal-content">
-            <!-- aria-label will now label the button to be spoken by a screen reader, but visually it remains the same for someone to just click intuitively. -->
-            <button id="closeBtn" onclick="hideModalDialog()" aria-label="Close Dialog">&times;</button>
-            <h1 id="dlgTitle">Sample Modal</h1>
-            <p>Success! the dialog is open.</p>
-            <p>Click the close button to return to the rest of the web page.</p>
+            <div id="weather" class="weatherContent">
+                <h1 id="location"></h1>
+                <p id="description"></p>
+                <p id="temp"></p>
+            </div>
+            <div id="modalMsg" aria-live="polite"></div>
             </div>
         </div>
 
