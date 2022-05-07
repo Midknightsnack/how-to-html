@@ -18,7 +18,7 @@ Check out the [issues](https://github.com/Midknightsnack/how-to-html/issues) and
 I'll be sure to merge pull requests as soon as I can. 🙃
 
 ## How to Run Code
-Running the code is pretty easy. If you're on Visual Studio Code, just write click the file and click "Open in Default Browser" or "Open in Other Browsers". 
+Running the code is pretty easy. If you're on Visual Studio Code, just right click the file and click "Open in Default Browser" or "Open in Other Browsers". 
 
 Optional but Recommended: On Visual Studio Code, there's a useful extension callled Live Server and it's by Ritwick Dey. The extension allows you to make changes to your code while seeing the results of it in real time so you don't have to open and close the html file everytime. 
 
@@ -29,3 +29,11 @@ Optional but Recommended: On Visual Studio Code, there's a useful extension call
 ## Other Things to Note
 * There are designated areas to work on your issue in index.html. However, you're free to include other files as long as they don't conflict with index.html and styles.css.
 * If you work on an issue, make sure the things you create are stylized by utilizing styles.css. Change the font or give things a border, but don't just leave it with its default look.
+
+## Coding Standards
+[Front End Coding Standards](https://github.com/bendc/frontend-guidelines)
+
+## Contact Information
+It's fine if you message me on GitHub, but I'll respond faster using the following:
+* Email: bdippin12@csu.fullerton.edu
+* Discord: Midknight#6920
