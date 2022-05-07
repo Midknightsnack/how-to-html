@@ -5,6 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
+    <script src="js/modal-dialog.js"></script>
+   <script src="js/weather-main.js"></script>
     <title>How-To-HTML</title>
 </head>
 <body>
@@ -20,7 +22,29 @@
       </div> <br>
 
     <div>
-        Create a modal here and add a button to open it
+        <!-- Start of modal dialog section. -->
+        <h2>Modal Dialog</h2>
+        <button id="openBtn" onclick="showModalDialog()">Open Modal Dialog</button><br>
+        <div role="region" aria-live="polite" id="dismissMsg" class="msgDivider"></div>
+
+        <!-- The modal dialog itself. -->
+        <div role="dialog" aria-labelledby="dlgTitle" aria-modal="true" id="mdlgMain">
+            <div class="modalContent">
+            <button id="closeBtn" onclick="hideModalDialog()" aria-label="Close Weather Modal">&times;</button>
+            <h1 id="dlgTitle">Weather</h1>
+            <p>Click below to get the current weather for Fullerton, California.</p>
+            <button id="weatherBtn" onclick="getWeather()">Get Weather</button>
+
+            <div id="weather" class="weatherContent">
+                <h2 id="location"></h2>
+                <p id="description"></p>
+                <p id="temp"></p>
+            </div>
+            <div id="modalMsg" aria-live="polite"></div>
+            </div>
+        </div>
+
+    <!-- End of modal section. -->
     </div> <br>
     <div>
         Change image on hover
@@ -31,5 +55,6 @@
     <div>
         Create a table 
     </div> <br>
+</main>
 </body>
 </html>

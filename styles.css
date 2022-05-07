@@ -9,7 +9,9 @@ body {
     background: #333;
     color: white;
     font-size: 30px;
-  }
+}
+
+
 
 /* Add a black background color to the top navigation */
 .topnav {
@@ -38,3 +40,74 @@ body {
     background-color: #04AA6D;
     color: white;
   }
+
+
+/*Style for a divider tag that contains screen reader messages.*/
+/*Hide these messages visually. A screen reader will still announce them as needed.*/
+.msgDivider {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+}
+
+/*Style for the dialog entirely.*/
+#mdlgMain {
+    display: none;
+    visibility: hidden;  /*For iOS Safari and VoiceOver screen reader compatibility.*/
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+}
+
+/*Style the dialog content.*/
+.modalContent {
+    background-color: #fefefe;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+}
+
+#closeBtn {
+    color: #aaa;  /*A grey color*/
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+/*Preliminary styling to the button*/
+#weatherBtn {
+    color: #00008b;
+    float: right;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+/*Attempt to style the weather content.*/
+.weatherContent {
+    background-color: #0f2129;
+    color: white;
+}
+
+/*Hide inner modal accessibility messages visually.*/
+#modalMsg {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+}
