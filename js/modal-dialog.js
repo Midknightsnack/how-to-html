@@ -24,13 +24,13 @@ function showModalDialog() {
 	let closeBtn = document.getElementById("closeBtn");
 
 	// Show the dialog and place the screen reader's focus within the dialog
-		// We will set focus to the close button
-		// tip: Best to set focus into friendly portions of the modal, such as a form field or a button that invokes the closure of that dialog
+	// We will set focus to the close button
+	// tip: Best to set focus into friendly portions of the modal, such as a form field or a button that invokes the closure of that dialog
 	modalDialogElem.style.visibility = "visible";
 	modalDialogElem.style.display = "block";
 	closeBtn.focus();
 
-}  // End of "showModalDialog"
+}
 
 
 /**  hideModalDialog
@@ -42,7 +42,7 @@ function showModalDialog() {
 
 function hideModalDialog() {
 	let modalDialogElem = document.getElementById("mdlgMain");
-	let announceMsg = document.getElementById("announceMsg");
+	let dismissAlert = document.getElementById("dismissMsg");
 	let openBtn = document.getElementById("openBtn");
 
 	// Hide the modal and return focus back to the button that opened it initially
@@ -50,25 +50,23 @@ function hideModalDialog() {
 	// Safari on iOS with VoiceOver benefits from the visibility CSS property for appropriate awareness
 	modalDialogElem.style.visibility = "hidden";
 
-	announceMsg.innerHTML = "Modal dialog dismissed.";
+	dismissAlert.innerHTML = "Modal dialog dismissed.";
 	openBtn.focus();
 
 	// Clear the message from the HTML so the screen reader doesn't redundantly read it when navigating
 	// after 4 seconds
-	setTimeout(clearAccessibleMessage, 4000);
+	setTimeout(clearDismissAlert, 4000);
 
-}  // End of "hideModalDialog"
+}
 
 
-/**  clearAccessibleMessage
- * this is just a useful function to clear any messages that have already been
- * announced but that can be safely cleared from the document
- * For the time being, this just clears the message of the modal dialog being dismissed
- * Could potentially be used to clear various other elements that have messages for a screen reader to read
+/**  clearAccessibleMsg
+ * Clear the accessible message after 4 seconds
+ * from a call of the setTimeout function
  * 
  * @return: void
  */
 
-function clearAccessibleMessage() {
-	document.getElementById("announceMsg").innerHTML = "";
-}  // End of "clearAccessibleMessages"
+function clearDismissAlert() {
+	document.getElementById("dismissMsg").innerHTML = "";
+}

@@ -62,6 +62,12 @@ body {
     font-weight: bold;
 }
 
+/*Attempt to style the weather content.*/
+.weatherContent {
+    background-color: #0f2129;
+    color: white;
+}
+
 /*Hide inner modal accessibility messages visually.*/
 #modalMsg {
     position: absolute;

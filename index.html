@@ -21,7 +21,7 @@
     <div>
         <h2>Modal Dialog</h2>
         <button id="openBtn" onclick="showModalDialog()">Open Modal Dialog</button><br>
-        <div role="region" aria-live="polite" id="announceMsg" class="msgDivider"></div>
+        <div role="region" aria-live="polite" id="dismissMsg" class="msgDivider"></div>
 
         <!-- The modal dialog itself. -->
         <div role="dialog" aria-labelledby="dlgTitle" aria-modal="true" id="mdlgMain">
@@ -32,7 +32,7 @@
             <button id="weatherBtn" onclick="getWeather()">Get Weather</button>
 
             <div id="weather" class="weatherContent">
-                <h1 id="location"></h1>
+                <h2 id="location"></h2>
                 <p id="description"></p>
                 <p id="temp"></p>
             </div>
